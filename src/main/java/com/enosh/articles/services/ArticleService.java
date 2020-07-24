@@ -20,17 +20,21 @@ public class ArticleService implements EntityService<Article, Long> {
     private final ArticleRepository articleRepository;
     private final ParagraphService paragraphService;
 
+
     @Transactional
     @Override
     public Article add(Article article) throws Exception {
-        List<Paragraph> paragraphs = Optional.ofNullable(article)
-                .map(Article::getParagraphs)
-                .map(articleParagraphs -> articleParagraphs
-                        .stream()
-                        .map(paragraphService::add)
-                        .collect(Collectors.toList()))
-                .orElse(new ArrayList<>());
-        return articleRepository.save(article);
+        return Optional.ofNullable(article)
+                .map(candidate -> {
+                    candidate.setParagraphs(
+                            candidate.getParagraphs()
+                            .stream()
+                            .map(paragraphService::add)
+                            .collect(Collectors.toList())
+                    );
+                    return candidate;
+                }).map(articleRepository::save)
+                .orElseThrow(() -> new Exception("Article was null :("));
     }
 
     @Override
