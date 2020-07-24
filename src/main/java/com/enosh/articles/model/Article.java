@@ -26,6 +26,5 @@ public class Article extends BaseEntity{
     @OneToMany(cascade = CascadeType.ALL)
     private List<Paragraph> paragraphs;
 
-
-
 }
+

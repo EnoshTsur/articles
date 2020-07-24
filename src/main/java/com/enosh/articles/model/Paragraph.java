@@ -20,4 +20,12 @@ public class Paragraph extends BaseEntity {
     public Paragraph(String content) {
         this.content = content;
     }
+
+    @Override
+    public String toString() {
+        return "Paragraph{" +
+                "id=" + id + ", " +
+                "content='" + content + '\'' +
+                '}';
+    }
 }
