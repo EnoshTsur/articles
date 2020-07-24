@@ -11,7 +11,6 @@ import javax.persistence.Table;
 
 @Getter
 @Setter
-@ToString
 @NoArgsConstructor
 @Entity
 @Table(name = "author")
