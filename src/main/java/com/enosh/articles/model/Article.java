@@ -26,5 +26,10 @@ public class Article extends BaseEntity{
     @OneToMany(cascade = CascadeType.ALL)
     private List<Paragraph> paragraphs;
 
+    public Article(String header, Author author, List<Paragraph> paragraphs) {
+        this.header = header;
+        this.author = author;
+        this.paragraphs = paragraphs;
+    }
 }
 
