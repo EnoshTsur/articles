@@ -1,10 +1,12 @@
 package com.enosh.articles.services;
 
 
+import com.enosh.articles.model.BaseEntity;
+
 import java.util.List;
 import java.util.Optional;
 
-public interface EntityService<Entity, ID> {
+public interface EntityService<Entity extends BaseEntity, ID> {
 
    Entity add(Entity entity);
 
