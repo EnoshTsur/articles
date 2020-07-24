@@ -30,4 +30,14 @@ public class Author extends BaseEntity {
         this.lastName = lastName;
         this.image = image;
     }
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "id= " + id + ", " +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", image='" + image + '\'' +
+                '}';
+    }
 }

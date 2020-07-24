@@ -31,5 +31,15 @@ public class Article extends BaseEntity{
         this.author = author;
         this.paragraphs = paragraphs;
     }
+
+    @Override
+    public String toString() {
+        return "Article{" +
+                "header='" + header + '\'' +
+                ", author=" + author +
+                ", paragraphs=" + paragraphs +
+                ", id=" + id +
+                '}';
+    }
 }
 
