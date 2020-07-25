@@ -1,6 +1,7 @@
 package com.enosh.articles.article;
 
 import com.enosh.articles.model.Article;
+import com.enosh.articles.model.ArticleDto;
 import com.enosh.articles.model.Author;
 import com.enosh.articles.model.Paragraph;
 import com.enosh.articles.services.ArticleService;
@@ -44,6 +45,38 @@ class ArticleTests {
 
         try {
             System.out.println(articleService.add(article));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    @Test
+    void addArticleDto() {
+
+        Author author = authorService.add(
+                new Author(
+                        "Yosef",
+                        "Ha-Mesaper",
+                        "http://yosef-avatar.gif"
+                )
+        );
+
+        List<Paragraph> paragraphs = List.of(
+                new Paragraph("Hi there this is me the sun"),
+                new Paragraph("Hello sun im your son"),
+                new Paragraph("Ok")
+        );
+
+        ArticleDto articleDto = new ArticleDto(
+                author.getId(),
+                "Sipur halom",
+                paragraphs
+        );
+
+        try {
+            System.out.println(articleService.add(articleDto));
         } catch (Exception e) {
             e.printStackTrace();
         }
