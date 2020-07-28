@@ -7,6 +7,7 @@ import lombok.ToString;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 
 @Getter
@@ -22,6 +23,7 @@ public class Author extends BaseEntity {
     @Column(name = "last_name", nullable = false)
     private String lastName;
 
+    @Lob
     @Column(name = "image")
     private String image;
 

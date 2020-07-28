@@ -1,3 +1,3 @@
-insert into author(first_name, last_name, image) values ('Yaron', 'Amitay', 'http');
-insert into author(first_name, last_name, image) values ('Dudi', 'Eviah', 'http');
-insert into author(first_name, last_name, image) values ('Maor', 'Shem Tov', 'http');
+insert into author(first_name, last_name, image) values ('Yaron', 'Amitay', 'https://c.tadst.com/gfx/750x500/authors-day-fun.jpg');
+insert into author(first_name, last_name, image) values ('Efrat', 'Leah', 'https://cdn.cnn.com/cnnnext/dam/assets/190523105413-01-judith-kerr-file-exlarge-169.jpg');
+insert into author(first_name, last_name, image) values ('Maor', 'Oz', 'https://media.npr.org/assets/img/2020/03/30/gettyimages-80904125-46ea932cc9e5cd78a6875577505e4c2cdfdb5224.jpg');
