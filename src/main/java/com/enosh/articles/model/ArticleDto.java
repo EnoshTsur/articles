@@ -18,3 +18,8 @@ public class ArticleDto {
     private List<Paragraph> paragraphs;
 
 }
+
+
+// Data transfer object
+
+

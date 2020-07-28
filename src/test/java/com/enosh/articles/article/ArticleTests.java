@@ -43,6 +43,12 @@ class ArticleTests {
 
         Article article = new Article("Sun story", author, paragraphs);
 
+        // input  -> header
+        // input -> textfield paragraphs
+        // id ->
+
+
+
         try {
             System.out.println(articleService.add(article));
         } catch (Exception e) {
